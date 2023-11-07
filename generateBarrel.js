@@ -3,6 +3,7 @@ const path = require('path'); // 경로 관련 모듈 사용
 
 // 소스 코드 디렉토리 경로 설정
 const srcFolderPath = path.join(__dirname, 'src');
+let count = 0;
 
 // (직접 수정) index.js = true, index.ts = false
 const isJavaScript = false;
@@ -20,8 +21,6 @@ targetFolderList.forEach((folder) => {
     generateIndexFile(folderPath); // 대상 폴더에서 index.js(ts) 파일 생성 함수 호출
   }
 });
-
-let count = 0;
 
 // 지정된 디렉토리 내의 파일들을 기반으로 index.js(ts) 파일을 생성하는 함수
 function generateIndexFile(directoryPath) {
